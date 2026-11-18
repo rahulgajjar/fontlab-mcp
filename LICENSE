@@ -1,0 +1,94 @@
+FontLab 8 MCP Community Source License 1.0
+Custom source-available license — not an OSI-approved open-source license
+
+Copyright (c) 2026 Rahul and the respective contributors.
+
+1. Scope and acceptance
+"Software" means the project-owned code and documentation distributed with
+this license. "Modified Software" includes changes to, and works incorporating
+or derived from, the Software. Independent programs that only communicate
+with the Software over MCP are not Modified Software under this license.
+Third-party dependencies and FontLab itself are not licensed under these terms.
+Exercising the permissions below constitutes acceptance of their conditions.
+
+2. Free use and outputs
+You may use the Software without charge, including in professional and
+commercial font-design, engineering, research and consulting work. You may
+use it with proprietary FontLab installations and independent MCP clients.
+Fonts, outlines, feature files, reports and other user-created outputs are not
+subject to this license merely because the Software processed or produced them.
+You retain your rights in your inputs and outputs and may keep or sell them.
+
+3. Copying, modification and source availability
+You may inspect, copy, modify and redistribute the Software without charging
+for it, subject to this license. Every redistribution of Software or Modified
+Software must include this license, copyright notices, a clear account of
+changes, and its complete corresponding source in the preferred form for
+modification, including build/install scripts. Credentials, personal data, font inputs and
+user-created outputs are excluded; provide documented configuration templates
+instead of secrets. That source must also be
+available to the public, without payment, under this same license. You may
+not impose additional restrictions on recipients' exercise of these rights.
+
+You may not incorporate the Software into a closed-source or proprietary
+derivative, library, application or service. When deploying Modified Software
+for operational use, including internal production use or a network service,
+you must publicly provide its complete corresponding source under this
+license. Private experiments and tests may remain private until operational
+deployment or redistribution. These obligations apply to the Software and
+its derivatives, not independent clients, FontLab, or user-created fonts.
+
+4. Contributing deployed modifications upstream
+For each version of Modified Software, within 30 days after its first
+redistribution or operational deployment, submit all modifications in that
+version not already submitted to the original project's public contribution channel as
+a pull request, or as a source patch linked from an issue if pull requests
+are unavailable. Your submission must identify the changes and provide the
+complete source required by section 3. If the original project no longer has
+a working public contribution channel, publish the changes in a publicly
+accessible repository and identify the original project and this license.
+You need not obtain acceptance or wait for a review, and maintainers are not
+required to accept your submission. Merely using an unmodified copy does not
+require a contribution.
+
+5. No sale or paid software offering
+You may not sell, rent, sublicense for payment, or otherwise charge for access
+to the Software or Modified Software. You may not bundle it into a paid
+software product or offer a paid hosted service whose material functionality
+is the Software. This does not prohibit charging for independently created
+fonts, font engineering, training or support, provided payment is not a
+condition of obtaining or using the Software itself and no prohibited paid
+software offering is made.
+
+6. Contributions and third-party rights
+Contributors retain copyright in their contributions and submit them under
+this same license. No copyright assignment is required. You must have the
+rights to submit your contribution. No rights to FontLab trademarks, code,
+licenses, proprietary assets or third-party dependencies are granted here.
+Those dependencies remain subject to their own licenses and notices.
+
+7. Patent permission
+Each contributor grants a non-exclusive, worldwide, royalty-free license to
+patent claims they control that are necessarily infringed by their contributed
+code, solely to exercise the rights granted here. This grant ends if you
+initiate patent litigation alleging the Software infringes your patents.
+
+8. Termination
+A material violation terminates your permissions. For a first violation,
+permissions are reinstated if you remedy it within 30 days of receiving
+written notice and take reasonable steps to prevent recurrence. Rights of
+recipients who comply with this license are not terminated by your violation.
+
+9. No warranty or liability
+TO THE EXTENT PERMITTED BY LAW, THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+COPYRIGHT HOLDERS AND CONTRIBUTORS ARE NOT LIABLE FOR CLAIMS OR DAMAGES
+ARISING FROM THE SOFTWARE OR ITS USE. Nothing excludes liability that cannot
+lawfully be excluded.
+
+10. Other permissions
+Permissions outside this license require a separate written agreement with
+the relevant copyright holders. No fee or permission for FontLab itself is
+included. This license does not limit rights available under applicable law
+independently of the license.

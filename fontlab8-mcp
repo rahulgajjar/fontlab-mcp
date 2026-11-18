@@ -1,0 +1,7 @@
+#!/bin/sh
+FONTLAB8_MCP_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd) || exit 1
+if [ ! -x "$FONTLAB8_MCP_DIR/.venv/bin/python" ]; then
+  printf '%s\n' 'Create .venv and install requirements.txt first; see README.md.' >&2
+  exit 1
+fi
+exec "$FONTLAB8_MCP_DIR/.venv/bin/python" "$FONTLAB8_MCP_DIR/run.py" "$@"

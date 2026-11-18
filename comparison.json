@@ -1,0 +1,463 @@
+{
+  "native_reference_count": 56,
+  "available_native_names": 26,
+  "additional_tools": 9,
+  "advertised_tools": 35,
+  "tools": [
+    {
+      "name": "get_preferences",
+      "origin": "FontLab 9 name",
+      "purpose": "Read application preferences.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "set_preferences",
+      "origin": "FontLab 9 name",
+      "purpose": "Change application preferences.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "list_aidus_files",
+      "origin": "FontLab 9 name",
+      "purpose": "List assistant workspace files.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "read_aidus_file",
+      "origin": "FontLab 9 name",
+      "purpose": "Read an assistant workspace file.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "write_aidus_file",
+      "origin": "FontLab 9 name",
+      "purpose": "Write an assistant workspace file.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "new_font",
+      "origin": "FontLab 9 name",
+      "purpose": "Create a font.",
+      "status": "Available, scoped",
+      "scope": "Only the default Latin Simple repertoire is qualified."
+    },
+    {
+      "name": "open_font",
+      "origin": "FontLab 9 name",
+      "purpose": "Open a font file.",
+      "status": "Available, scoped",
+      "scope": "Basic native operation."
+    },
+    {
+      "name": "save_font",
+      "origin": "FontLab 9 name",
+      "purpose": "Save the opened font.",
+      "status": "Available, scoped",
+      "scope": "Native in-place VFC/VFJ save with retained backups; existing files require overwrite=true. First native save requires original basename.vfc and creates a VFJ sidecar. Native Save As to another path is refused. UFO remains a limited single-master snapshot."
+    },
+    {
+      "name": "close_font",
+      "origin": "FontLab 9 name",
+      "purpose": "Close a font document.",
+      "status": "Available, scoped",
+      "scope": "Clean fonts only. Dirty fonts and save=true are refused without opening a dialog. No forced discard."
+    },
+    {
+      "name": "list_fonts",
+      "origin": "FontLab 9 name",
+      "purpose": "List opened fonts.",
+      "status": "Available, scoped",
+      "scope": "Basic native operation."
+    },
+    {
+      "name": "get_active_font",
+      "origin": "FontLab 9 name",
+      "purpose": "Identify the active font.",
+      "status": "Available, scoped",
+      "scope": "Basic native operation."
+    },
+    {
+      "name": "set_active_font",
+      "origin": "FontLab 9 name",
+      "purpose": "Choose the active font.",
+      "status": "Available, scoped",
+      "scope": "Basic native operation."
+    },
+    {
+      "name": "get_features",
+      "origin": "FontLab 9 name",
+      "purpose": "Read feature source and revision.",
+      "status": "Available, scoped",
+      "scope": "Native source, shared FontGate classes and glyph order with revision. Not native compiled lookup access."
+    },
+    {
+      "name": "set_features",
+      "origin": "FontLab 9 name",
+      "purpose": "Replace feature source with validation.",
+      "status": "Available, scoped",
+      "scope": "Source replacement with FontTools validation, revision/dry-run and 1 MiB limit; include() refused. Raw layout bytes preserved. Native Undo and visual Lookup state not qualified."
+    },
+    {
+      "name": "compile_features",
+      "origin": "FontLab 9 name",
+      "purpose": "Compile and publish layout tables.",
+      "status": "Available, scoped",
+      "scope": "FontTools feaLib detached compilation via MCP stdio, then raw GSUB/GPOS/GDEF publication with compensation and native package-library archive for persistence. 1 MiB compiled/8 MiB archive limits; additional generated tables refused. Native Undo, visual lookup behavior and fontpr compilation are not qualified."
+    },
+    {
+      "name": "get_opentype_tables",
+      "origin": "FontLab 9 name",
+      "purpose": "Inspect/export stored OpenType bytes.",
+      "status": "Available, scoped",
+      "scope": "Reads native runtime table bytes; helper-managed archives rehydrate after native save/reopen. Not fresh export/compilation. Inline data limited to 512 KiB; larger data requires file export."
+    },
+    {
+      "name": "get_lookups",
+      "origin": "FontLab 9 name",
+      "purpose": "Read visual lookup definitions.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "set_lookups",
+      "origin": "FontLab 9 name",
+      "purpose": "Change visual lookup definitions.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "get_font_info",
+      "origin": "FontLab 9 name",
+      "purpose": "Read font metadata.",
+      "status": "Available, scoped",
+      "scope": "Returns 96 native FontInfo fields, not full VFJ package JSON; detail=full only. Master selection is supported."
+    },
+    {
+      "name": "get_font_hinting",
+      "origin": "FontLab 9 name",
+      "purpose": "Read master zones and standard stems.",
+      "status": "Available, scoped",
+      "scope": "Reads native PS/TT/family zones and PS/TT stems, per master with pagination. No automatic hinting."
+    },
+    {
+      "name": "set_font_info",
+      "origin": "FontLab 9 name",
+      "purpose": "Bulk-edit font metadata.",
+      "status": "Available, scoped",
+      "scope": "Native FontInfo field patches and masters[] are supported. scale_upm=true, axes/instances and arbitrary VFJ replacement are not qualified."
+    },
+    {
+      "name": "list_glyphs",
+      "origin": "FontLab 9 name",
+      "purpose": "List/filter glyph names and Unicode values.",
+      "status": "Available, scoped",
+      "scope": "Names/unicodes and query/has_unicode pagination only; facts/geometry filters are not ported."
+    },
+    {
+      "name": "get_current_glyphs",
+      "origin": "FontLab 9 name",
+      "purpose": "Read current/selected glyphs.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "get_active_glyphs",
+      "origin": "FontLab 9 name",
+      "purpose": "Read current glyphs (alias).",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "explain",
+      "origin": "FontLab 9 name",
+      "purpose": "Explain native object properties.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "set_active_glyph",
+      "origin": "FontLab 9 name",
+      "purpose": "Choose the current glyph.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "get_glyph",
+      "origin": "FontLab 9 name",
+      "purpose": "Read glyph construction/data.",
+      "status": "Available, scoped",
+      "scope": "detail=construction only: layer flags and anchors; full VFJ/component detail and attachment analysis not ported."
+    },
+    {
+      "name": "build_glyph",
+      "origin": "FontLab 9 name",
+      "purpose": "Construct a glyph from a recipe.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "set_glyph_anchors",
+      "origin": "FontLab 9 name",
+      "purpose": "Add/edit/remove anchors.",
+      "status": "Available, scoped",
+      "scope": "Native position/name/remove/expression/cloud fields; mark_enabled and native undo not qualified."
+    },
+    {
+      "name": "get_layer_hints",
+      "origin": "FontLab 9 name",
+      "purpose": "Read stored glyph-layer hints.",
+      "status": "Available, scoped",
+      "scope": "Reads native stored PS hint position/width/orientation/name and TTH count. Ghost, lock/link decoding and include_tth command strings are not qualified; no hint detection."
+    },
+    {
+      "name": "edit_layer_hints",
+      "origin": "FontLab 9 name",
+      "purpose": "Edit glyph-layer PostScript hints.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "get_glyph_nodes",
+      "origin": "FontLab 9 name",
+      "purpose": "Read indexed contour points.",
+      "status": "Available, scoped",
+      "scope": "Indexed local nodes and transforms; extrema computation not ported."
+    },
+    {
+      "name": "edit_glyph_nodes",
+      "origin": "FontLab 9 name",
+      "purpose": "Edit indexed contour points.",
+      "status": "Available, scoped",
+      "scope": "Coordinate set/move only; preflight/dry-run supported, native undo not qualified. Components and Auto layers refused."
+    },
+    {
+      "name": "geometry",
+      "origin": "FontLab 9 name",
+      "purpose": "Calculate vector/Bezier geometry.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "get_vfj_schema",
+      "origin": "FontLab 9 name",
+      "purpose": "Describe writable native glyph data.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "edit_glyph_components",
+      "origin": "FontLab 9 name",
+      "purpose": "Change component references/transforms.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "set_glyph",
+      "origin": "FontLab 9 name",
+      "purpose": "Create/replace a whole glyph.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "get_font_metrics",
+      "origin": "FontLab 9 name",
+      "purpose": "Read font metrics.",
+      "status": "Available, scoped",
+      "scope": "Basic native operation."
+    },
+    {
+      "name": "set_font_metrics",
+      "origin": "FontLab 9 name",
+      "purpose": "Change font metrics.",
+      "status": "Available, scoped",
+      "scope": "Basic native operation."
+    },
+    {
+      "name": "get_glyph_metrics",
+      "origin": "FontLab 9 name",
+      "purpose": "Read width and sidebearings.",
+      "status": "Available, scoped",
+      "scope": "Numeric width/LSB/RSB and current expression strings; empty glyph sidebearings are null."
+    },
+    {
+      "name": "set_glyph_metrics",
+      "origin": "FontLab 9 name",
+      "purpose": "Change numeric width and sidebearings.",
+      "status": "Available, scoped",
+      "scope": "Manual numeric width/LSB/RSB. LSB shifts ink and advance together to retain RSB; explicit width/RSB conflicts rejected. Bound expressions and Auto layers refused."
+    },
+    {
+      "name": "list_kerning_pairs",
+      "origin": "FontLab 9 name",
+      "purpose": "List manual kerning pairs.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "get_kerning_pair",
+      "origin": "FontLab 9 name",
+      "purpose": "Read a kerning pair.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "set_kerning_pair",
+      "origin": "FontLab 9 name",
+      "purpose": "Set a kerning pair.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "delete_kerning_pair",
+      "origin": "FontLab 9 name",
+      "purpose": "Remove a kerning pair.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "delete_all_kerning_pairs",
+      "origin": "FontLab 9 name",
+      "purpose": "Clear kerning pairs.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "list_kerning_classes",
+      "origin": "FontLab 9 name",
+      "purpose": "List kerning classes.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "set_kerning_class",
+      "origin": "FontLab 9 name",
+      "purpose": "Create/edit a kerning class.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "delete_kerning_class",
+      "origin": "FontLab 9 name",
+      "purpose": "Remove a kerning class.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "delete_all_kerning_classes",
+      "origin": "FontLab 9 name",
+      "purpose": "Clear kerning classes.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "rename_kerning_class",
+      "origin": "FontLab 9 name",
+      "purpose": "Rename a kerning class.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "list_actions",
+      "origin": "FontLab 9 name",
+      "purpose": "List available editing actions.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "run_actions",
+      "origin": "FontLab 9 name",
+      "purpose": "Apply editing actions to glyphs.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "set_notepad_content",
+      "origin": "FontLab 9 name",
+      "purpose": "Set preview/proof text.",
+      "status": "Not available",
+      "scope": "Not implemented; not advertised."
+    },
+    {
+      "name": "run_python",
+      "origin": "FontLab 9 name",
+      "purpose": "Execute Python inside FontLab.",
+      "status": "Available, scoped",
+      "scope": "Persistent agent namespace inside FontLab 8; not the Scripting panel namespace. fontpr/mcp_tools expose only this ported subset."
+    },
+    {
+      "name": "get_python_output",
+      "origin": "FontLab 9 name",
+      "purpose": "Read captured Python output.",
+      "status": "Available, scoped",
+      "scope": "Only output captured from this adapter\u2019s most recent run_python call, not the entire FontLab Output panel."
+    },
+    {
+      "name": "export_font",
+      "origin": "Additional tool",
+      "purpose": "Export through native font profiles.",
+      "status": "Available, scoped",
+      "scope": "FontLab 8 extension (not one of the native 9 catalog's 56 names): export using a native profile to a new directory. Interchange may omit FontLab-only data."
+    },
+    {
+      "name": "get_glyph_info",
+      "origin": "Additional tool",
+      "purpose": "Read name, Unicode, spacing and glyph metadata.",
+      "status": "Available, scoped",
+      "scope": "read notes, color marks, tags and Unicode scalars for named glyphs."
+    },
+    {
+      "name": "set_glyph_info",
+      "origin": "Additional tool",
+      "purpose": "Bulk-edit names, Unicode, notes, marks and tags.",
+      "status": "Available, scoped",
+      "scope": "preflight and apply bulk glyph metadata patches; native undo not qualified. Supports explicit new_name; does not rewrite feature/class text references or replace outlines."
+    },
+    {
+      "name": "get_glyph_source",
+      "origin": "Additional tool",
+      "purpose": "Read all layer points/anchors as JSON or GLIF.",
+      "status": "Available, scoped",
+      "scope": "Read all existing layer points/anchors/width as native JSON or GLIF XML. Not a full FontLab document serializer."
+    },
+    {
+      "name": "set_glyph_source",
+      "origin": "Additional tool",
+      "purpose": "Write point/anchor coordinates while preserving topology.",
+      "status": "Available, scoped",
+      "scope": "Write layer coordinates, width and anchors from JSON or GLIF; revision required. Existing shape/contour/node topology, types and smooth flags must remain unchanged; no native undo."
+    },
+    {
+      "name": "get_font_structure",
+      "origin": "Additional tool",
+      "purpose": "Read axes, master locations and instances.",
+      "status": "Available, scoped",
+      "scope": "Read native axes, master locations and instance metadata with revision. Locations enumerate known axis short names only."
+    },
+    {
+      "name": "set_font_structure",
+      "origin": "Additional tool",
+      "purpose": "Change axes, locations and instance metadata.",
+      "status": "Available, scoped",
+      "scope": "Patch/add axes and master locations; instances[] replaces the instance list. Revision/preflight/dry-run; native undo and rollback of axis insertion are not qualified."
+    },
+    {
+      "name": "get_classes",
+      "origin": "Additional tool",
+      "purpose": "Read native OpenType class membership.",
+      "status": "Available, scoped",
+      "scope": "Read native OpenType class memberships plus native panel summary; kerning class editing is excluded."
+    },
+    {
+      "name": "set_classes",
+      "origin": "Additional tool",
+      "purpose": "Create/edit/remove OpenType class membership.",
+      "status": "Available, scoped",
+      "scope": "Patch/create/remove OpenType class memberships by name, with revision and dry-run. No native undo; nonzero class marks and kerning groups are refused."
+    }
+  ]
+}

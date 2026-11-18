@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fontlab8-native": {
+      "command": "/absolute/path/to/this/repository/fontlab8-mcp",
+      "args": []
+    }
+  }
+}

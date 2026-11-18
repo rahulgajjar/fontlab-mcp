@@ -1,0 +1,816 @@
+{
+  "tools": [
+    {
+      "name": "new_font",
+      "description": "Create a font.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "encoding": {
+            "type": "string"
+          },
+          "family_name": {
+            "type": "string"
+          },
+          "style_name": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "open_font",
+      "description": "Open a font file.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "save_font",
+      "description": "Save the opened font.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string"
+          },
+          "overwrite": {
+            "type": "boolean"
+          },
+          "path": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "close_font",
+      "description": "Close a font document.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "save": {
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "list_fonts",
+      "description": "List opened fonts.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {},
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_active_font",
+      "description": "Identify the active font.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {},
+        "type": "object"
+      }
+    },
+    {
+      "name": "set_active_font",
+      "description": "Choose the active font.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_features",
+      "description": "Read feature source and revision.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string"
+          },
+          "output_path": {
+            "type": "string"
+          },
+          "overwrite": {
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "set_features",
+      "description": "Replace feature source with validation.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "object"
+          },
+          "data_path": {
+            "type": "string"
+          },
+          "dry_run": {
+            "type": "boolean"
+          },
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string"
+          },
+          "revision": {
+            "type": "string"
+          },
+          "validate": {
+            "type": "boolean"
+          },
+          "version": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version",
+          "revision"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "compile_features",
+      "description": "Compile and publish layout tables.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "dry_run": {
+            "type": "boolean"
+          },
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "revision": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "revision"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_opentype_tables",
+      "description": "Inspect/export stored OpenType bytes.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string"
+          },
+          "include_data": {
+            "type": "boolean"
+          },
+          "output_path": {
+            "type": "string"
+          },
+          "overwrite": {
+            "type": "boolean"
+          },
+          "tags": {
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_font_info",
+      "description": "Read font metadata.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "detail": {
+            "type": "string"
+          },
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "number"
+          },
+          "master_name": {
+            "type": "string"
+          },
+          "offset": {
+            "type": "number"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_font_hinting",
+      "description": "Read master zones and standard stems.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "number"
+          },
+          "master_name": {
+            "type": "string"
+          },
+          "offset": {
+            "type": "number"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "set_font_info",
+      "description": "Bulk-edit font metadata.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "all_masters": {
+            "type": "boolean"
+          },
+          "font_id": {
+            "type": "number"
+          },
+          "font_info": {
+            "type": "object"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "master_name": {
+            "type": "string"
+          },
+          "scale_upm": {
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "list_glyphs",
+      "description": "List/filter glyph names and Unicode values.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "detail": {
+            "type": "string"
+          },
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "has_unicode": {
+            "type": "boolean"
+          },
+          "limit": {
+            "type": "number"
+          },
+          "max_bottom": {
+            "type": "number"
+          },
+          "max_contour_count": {
+            "type": "number"
+          },
+          "min_bottom": {
+            "type": "number"
+          },
+          "min_component_count": {
+            "type": "number"
+          },
+          "min_contour_count": {
+            "type": "number"
+          },
+          "offset": {
+            "type": "number"
+          },
+          "query": {
+            "type": "string"
+          },
+          "script": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_glyph",
+      "description": "Read glyph construction/data.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "component_index": {
+            "type": "number"
+          },
+          "detail": {
+            "type": "string"
+          },
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "glyph_name": {
+            "type": "string"
+          },
+          "layer_name": {
+            "type": "string"
+          },
+          "mark_glyph": {
+            "type": "string"
+          },
+          "nodes_format": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "glyph_name"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "set_glyph_anchors",
+      "description": "Add/edit/remove anchors.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "anchors": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "cloud_enabled": {
+                  "type": "boolean"
+                },
+                "expression_x": {
+                  "maxLength": 256,
+                  "type": "string"
+                },
+                "expression_y": {
+                  "maxLength": 256,
+                  "type": "string"
+                },
+                "mark_enabled": {
+                  "type": "boolean"
+                },
+                "name": {
+                  "maxLength": 128,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "boolean"
+                },
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "type": "object"
+            },
+            "maxItems": 64,
+            "minItems": 1,
+            "type": "array"
+          },
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "glyph_name": {
+            "type": "string"
+          },
+          "layer_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "glyph_name",
+          "anchors"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_layer_hints",
+      "description": "Read stored glyph-layer hints.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "glyph_name": {
+            "type": "string"
+          },
+          "include_tth": {
+            "type": "boolean"
+          },
+          "layer_name": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "glyph_name"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_glyph_nodes",
+      "description": "Read indexed contour points.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "contour_index": {
+            "type": "integer"
+          },
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "glyph_name": {
+            "type": "string"
+          },
+          "layer_name": {
+            "type": "string"
+          },
+          "shape_index": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "glyph_name"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "edit_glyph_nodes",
+      "description": "Edit indexed contour points.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "dry_run": {
+            "type": "boolean"
+          },
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "glyph_name": {
+            "type": "string"
+          },
+          "layer_name": {
+            "type": "string"
+          },
+          "operations": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "axis": {
+                  "enum": [
+                    "x",
+                    "y"
+                  ],
+                  "type": "string"
+                },
+                "centered": {
+                  "type": "boolean"
+                },
+                "contour_index": {
+                  "type": "integer"
+                },
+                "distance": {
+                  "type": "number"
+                },
+                "dx": {
+                  "type": "number"
+                },
+                "dy": {
+                  "type": "number"
+                },
+                "matrix": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "maxItems": 6,
+                  "minItems": 6,
+                  "type": "array"
+                },
+                "move_handles": {
+                  "type": "boolean"
+                },
+                "node_index": {
+                  "type": "integer"
+                },
+                "node_indices": {
+                  "items": {
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                "op": {
+                  "enum": [
+                    "add",
+                    "delete",
+                    "set",
+                    "move",
+                    "duplicate",
+                    "duplicate_extrema",
+                    "split",
+                    "transform",
+                    "reverse"
+                  ],
+                  "type": "string"
+                },
+                "shape_index": {
+                  "type": "integer"
+                },
+                "smooth": {
+                  "type": "boolean"
+                },
+                "t": {
+                  "type": "number"
+                },
+                "type": {
+                  "enum": [
+                    "on",
+                    "off",
+                    "curve"
+                  ],
+                  "type": "string"
+                },
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "op",
+                "shape_index",
+                "contour_index"
+              ],
+              "type": "object"
+            },
+            "maxItems": 256,
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "glyph_name",
+          "operations"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_font_metrics",
+      "description": "Read font metrics.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "set_font_metrics",
+      "description": "Change font metrics.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "ascender": {
+            "type": "number"
+          },
+          "cap_height": {
+            "type": "number"
+          },
+          "descender": {
+            "type": "number"
+          },
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "italic_angle": {
+            "type": "number"
+          },
+          "line_gap": {
+            "type": "number"
+          },
+          "weight": {
+            "type": "number"
+          },
+          "width": {
+            "type": "number"
+          },
+          "x_height": {
+            "type": "number"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_glyph_metrics",
+      "description": "Read width and sidebearings.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "glyph_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "glyph_name"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "set_glyph_metrics",
+      "description": "Change numeric width and sidebearings.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "advance_width": {
+            "type": "number"
+          },
+          "font_id": {
+            "type": "number"
+          },
+          "font_name": {
+            "type": "string"
+          },
+          "glyph_name": {
+            "type": "string"
+          },
+          "lsb": {
+            "type": "number"
+          },
+          "metrics_left": {
+            "type": "string"
+          },
+          "metrics_right": {
+            "type": "string"
+          },
+          "metrics_width": {
+            "type": "string"
+          },
+          "rsb": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "glyph_name"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "run_python",
+      "description": "Execute Python inside FontLab.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_python_output",
+      "description": "Read captured Python output.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "lines": {
+            "type": "number"
+          }
+        },
+        "type": "object"
+      }
+    }
+  ]
+}

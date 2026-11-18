@@ -1,0 +1,15 @@
+name: Workflow or platform request
+description: Propose a font-design/engineering workflow, FontLab 7 support or another platform port.
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow and expected result
+      description: Describe the real font-design or engineering need, not only a missing tool name.
+    validations:
+      required: true
+  - type: textarea
+    id: platform
+    attributes:
+      label: Versions/platform and proposed verification
+      description: Exact FontLab/OS versions, relevant API clues, and how a disposable saved-file roundtrip could verify it.

@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a reproducible MCP or native font-work failure.
+body:
+  - type: markdown
+    attributes:
+      value: Do not upload private fonts, license data, credentials or unredacted personal paths. Use a synthetic fixture where possible.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: macOS/OS architecture, exact FontLab build, external/embedded Python versions, MCP client.
+    validations:
+      required: true
+  - type: textarea
+    id: call
+    attributes:
+      label: Tool call and reproduction steps
+      description: Include JSON arguments and whether a font/master/layer was loaded.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual results
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Error, saved-file result and minimal fixture
+      description: Redacted logs, native save/reopen outcome, and any recovery steps. Attach only material you have permission to share.
