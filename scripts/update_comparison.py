@@ -13,7 +13,7 @@ def cell(value):
 
 summary = f"**This adapter offers {data['advertised_tools']} tools: {data['available_native_names']} share names with tools in FontLab 9 MCP, and {data['additional_tools']} are additional adapter tools.**"
 table = "| Tool | Purpose | FontLab 9 MCP catalog | This FontLab 8 adapter | Adapter coverage / limitations |\n|---|---|---|---|---|\n"
-for row in data["tools"]:
+for row in sorted(data["tools"], key=lambda row: row["status"] != "Available, scoped"):
     listed = "Listed" if row["origin"] == "FontLab 9 name" else "Not in compared catalog"
     status = "Supported, with limits" if row["status"] == "Available, scoped" else "Not supported"
     table += "| `" + row["name"] + "` | " + " | ".join(cell(v) for v in (row["purpose"], listed, status, row["scope"])) + " |\n"
