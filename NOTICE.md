@@ -12,3 +12,14 @@ Dependencies are installed separately, not relicensed by this project:
 - FontLab's embedded Python/PythonQt and native APIs are supplied by the user's installation under their respective terms; they are not bundled here.
 
 Preserve dependency notices when redistributing dependency code or binaries. No FontTools, TypeRig, third-party MCP server or FontLab source tree is vendored in this repository. API behavior from other versions/platforms requires independent qualification.
+
+## Interface provenance and scope of permission
+
+Compatibility tool names and parameter contracts were informed by research into
+FontLab 9 interfaces. Project-authored descriptions do not erase that origin.
+This is not a clean-room claim, a vendor license, or a legal clearance opinion.
+See docs/PROVENANCE.md for the distinction between implementation and interfaces.
+FontLab names identify the application with which this adapter interoperates;
+no trademark ownership, sponsorship or official support is claimed. References
+to native APIs or native file formats describe operations in the installed app,
+not a vendor-supplied MCP service. No FontLab logo is licensed or included.

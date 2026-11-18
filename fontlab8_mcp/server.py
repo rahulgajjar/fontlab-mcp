@@ -245,7 +245,7 @@ def handle(request):
                 protocolVersion="2024-11-05",
                 capabilities={"tools": {"listChanged": False}, "resources": {}, "prompts": {}},
                 instructions=INSTRUCTIONS,
-                serverInfo={"name": "FontLab 8 Native MCP Adapter", "version": "0.4.0"},
+                serverInfo={"name": "Unofficial MCP Adapter for FontLab 8", "version": "0.4.1"},
             )
         elif method == "resources/list":
             result = {"resources": [{"uri": URI, "name": "FontLab 8 agent workflow", "mimeType": "text/plain", "description": "Python object boundaries, dedicated tools and persistence verification."}]}

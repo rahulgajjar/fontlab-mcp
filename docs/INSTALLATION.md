@@ -7,7 +7,7 @@ The current installer supports macOS and FontLab 8 only. Install the external de
 - `~/Library/Application Support/FontLab8MCP/plugin/fontlab8_mcp/`: app-side Python modules.
 - `~/Library/Application Support/FontLab8MCP/backups/`: previous startup scripts/plugins and native-save backups.
 - `~/Library/Application Support/FontLab/FontLab 8/initScript.py`: one marked startup block, preserving other content.
-- `~/Library/Application Support/FontLab/FontLab 8/Scripts/Start Native FontLab 8 MCP.py`: optional manual start script.
+- `~/Library/Application Support/FontLab/FontLab 8/Scripts/Start MCP Adapter for FontLab 8.py`: optional manual start script.
 - `~/Library/Application Support/FontLab8MCP/{requests,results,ready.json}`: private local request queue and session state.
 
 The helper has no network listener. The private queue is accessible to your local user; the adapter is not a sandbox. A trusted agent can change opened fonts and run Python. Do not point untrusted clients at it.

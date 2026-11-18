@@ -141,7 +141,7 @@ def start():
             product="FontLab 8",
         ),
     )
-    print("FontLab 8 native MCP adapter ready")
+    print("Unofficial MCP adapter for FontLab 8 ready")
 
 
 def stop():

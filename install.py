@@ -49,9 +49,9 @@ def install(profile, data, source=ROOT):
         dirs_exist_ok=True,
         ignore=shutil.ignore_patterns("__pycache__", "*.pyc"),
     )
-    start = data / "Start Native FontLab 8 MCP.py"
+    start = data / "Start MCP Adapter for FontLab 8.py"
     start.write_text(
-        "#FLM: Start Native FontLab 8 MCP\nimport sys\n_path="
+        "#FLM: Start MCP Adapter for FontLab 8\nimport sys\n_path="
         + repr(str(plugin))
         + "\nif _path not in sys.path: sys.path.insert(0,_path)\n"
         + "from fontlab8_mcp.runtime import start\nstart()\n"

@@ -80,15 +80,30 @@ written notice and take reasonable steps to prevent recurrence. Rights of
 recipients who comply with this license are not terminated by your violation.
 
 9. No warranty or liability
-TO THE EXTENT PERMITTED BY LAW, THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
-COPYRIGHT HOLDERS AND CONTRIBUTORS ARE NOT LIABLE FOR CLAIMS OR DAMAGES
-ARISING FROM THE SOFTWARE OR ITS USE. Nothing excludes liability that cannot
-lawfully be excluded.
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE IS PROVIDED
+"AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OR CONDITION OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, TITLE AND NON-INFRINGEMENT. NO WARRANTY IS MADE THAT THE SOFTWARE
+IS ERROR-FREE, COMPATIBLE WITH EVERY FONTLAB VERSION, OR FREE FROM DATA LOSS.
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, COPYRIGHT HOLDERS AND
+CONTRIBUTORS SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING LOSS OF DATA OR PROFITS, WHETHER IN CONTRACT, TORT OR OTHERWISE,
+ARISING FROM OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.
+Nothing in this license excludes or limits liability or statutory rights that
+cannot lawfully be excluded or limited. These provisions do not bind third-party
+rights holders or prevent them from asserting their rights.
 
 10. Other permissions
 Permissions outside this license require a separate written agreement with
 the relevant copyright holders. No fee or permission for FontLab itself is
 included. This license does not limit rights available under applicable law
 independently of the license.
+
+11. Third-party rights and application license
+This license grants only rights the relevant contributors are entitled to grant.
+It grants no license to FontLab software, documentation, trademarks, patents or
+other third-party material. It does not amend or waive any agreement between a
+user and Fontlab. Users must obtain their own applicable application license.
+Nothing here authorizes bypassing activation, demo restrictions or technical
+protection measures, or using the application beyond applicable license limits.
+Nothing here limits non-waivable rights available under applicable law.

@@ -41,3 +41,7 @@ Include:
 - Save/export format, master/layer and whether the failure occurs after reopening.
 
 Redact private paths, font contents and credentials. For a crash or timeout, do not repeatedly replay a write; preserve autosaves and describe whether recovery was needed. Report security-sensitive details privately through GitHub's private vulnerability reporting if enabled; otherwise open an issue requesting a private contact without posting the sensitive details.
+
+## Provenance review
+
+For interface/API contributions identify public documentation, independently observed behavior or the source license. Do not assert clean-room provenance for work informed by prior analysis. Do not contribute vendor source, decompiled listings or copied manual/examples without documented permission. See [provenance](docs/PROVENANCE.md).
