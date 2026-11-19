@@ -8,6 +8,10 @@ Control an opened FontLab 8 font from an MCP-capable agent: inspect and edit Fon
 
 This is an independent compatibility adapter, not an official FontLab product and not FontLab 9's binary backend. You need your own licensed FontLab installation. The app bundle is not modified.
 
+## Releases
+
+**v0.4.1 is the first public prerelease.** See the [changelog](CHANGELOG.md), [GitHub releases](https://github.com/rahulgajjar/fontlab-mcp/releases) and [release workflow](docs/RELEASING.md). Use a tagged release for a reproducible installation; the main branch may contain newer changes.
+
 ## Install
 
 1. Download or clone this repository, then open a terminal in its directory.

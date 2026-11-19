@@ -5,6 +5,7 @@ from pathlib import Path
 import sys
 from jsonschema import Draft202012Validator
 from fontTools.ufoLib import validateInfoVersion3Data
+from . import __version__
 from .client import call
 from .guidance import GUIDE, URI, INSTRUCTIONS
 
@@ -245,7 +246,7 @@ def handle(request):
                 protocolVersion="2024-11-05",
                 capabilities={"tools": {"listChanged": False}, "resources": {}, "prompts": {}},
                 instructions=INSTRUCTIONS,
-                serverInfo={"name": "Unofficial MCP Adapter for FontLab 8", "version": "0.4.1"},
+                serverInfo={"name": "Unofficial MCP Adapter for FontLab 8", "version": __version__},
             )
         elif method == "resources/list":
             result = {"resources": [{"uri": URI, "name": "FontLab 8 agent workflow", "mimeType": "text/plain", "description": "Python object boundaries, dedicated tools and persistence verification."}]}
